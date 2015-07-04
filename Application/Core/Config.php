@@ -7,7 +7,7 @@ namespace Application\Core;
  * @package Application
  */
 class Config {
-    public static $site_url = "http://h.acnm.org.br";
+    public static $site_url = "http://acnm.org.br";
     public static $db_host = "104.236.170.225";
     public static $db_name = "acnm";
     public static $db_user = "acnm";
