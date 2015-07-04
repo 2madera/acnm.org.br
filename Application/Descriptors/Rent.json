@@ -1,0 +1,68 @@
+{
+    "name": "Espréstimo",
+    "fields": {
+        "id": {
+            "name": "Código",
+            "type": "index",
+            "editable": true
+        },
+        "created_at": {
+            "name": "Criado em:",
+            "type": "datetime",
+            "nullable": false,
+            "default": "CURRENT_TIMESTAMP",
+            "editable": false,
+            "required": true
+        },
+        "leave_date": {
+            "name": "Devolução em:",
+            "type": "datetime",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "user": {
+            "name": "Usuário",
+            "type": "object",
+            "object": "User",
+            "follow": true,
+            "default": "current_user",
+            "nullable": false,
+            "editable": false,
+            "required": true
+        },
+        "people": {
+            "name": "Pessoa",
+            "type": "object",
+            "object": "People",
+            "follow": true,
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "book": {
+            "name": "Livro",
+            "type": "object",
+            "object": "Book",
+            "follow": true,
+            "nullable": false,
+            "editable": true,
+            "required": true
+        }
+    },
+    "grid": {
+        "created_at": "Criado em",
+        "leave_date": "Devolução em"
+    },
+    "roles": {
+        "free": [],
+        "normal": [
+            "index",
+            "search",
+            "view",
+            "edit",
+            "save",
+            "delete"
+        ]
+    }
+}

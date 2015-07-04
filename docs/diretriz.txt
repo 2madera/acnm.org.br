@@ -1,0 +1,12 @@
+Dar preferencia para cadastro de pessoas (alugam)
+Alerta de tempo na home page - Lista de pessoas que estam devendo o livro de volta.
+
+Pessoas
+Nome, endereço - Regina vai me enviar o que é necessário. (Ficha)
+Pessoas podem indicar novos livros que queiram.
+Caixa de sugestões.
+
+Incluir um cadastro de agenda. Calendário.
+
+Formulário de contato.
+

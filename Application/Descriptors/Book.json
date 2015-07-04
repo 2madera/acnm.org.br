@@ -1,0 +1,118 @@
+{
+    "name": "Livro",
+    "fields": {
+        "id": {
+            "name": "Código",
+            "type": "index",
+            "editable": true
+        },
+        "name": {
+            "name": "Nome",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "author": {
+            "name": "Autor",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "user": {
+            "name": "Criado por",
+            "type": "object",
+            "object": "User",
+            "default": "current_user",
+            "follow": true,
+            "nullable": false,
+            "editable": false,
+            "required": true
+        },
+        "publisher": {
+            "name": "Editora",
+            "type": "object",
+            "object": "Publisher",
+            "follow": true,
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "summary": {
+            "name": "Sumário",
+            "type": "text",
+            "editable": true,
+            "required": false
+        },
+        "edition": {
+            "name": "Edição",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "volume": {
+            "name": "Volume",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "quantity": {
+            "name": "Quantidade",
+            "type": "int",
+            "nullable": false,
+            "editable": true,
+            "required": false,
+            "default": 1,
+            "mask": "999"
+        },
+        "created_at": {
+            "name": "Criado em:",
+            "type": "datetime",
+            "nullable": false,
+            "default": "CURRENT_TIMESTAMP",
+            "editable": false,
+            "required": true
+        },
+        "status": {
+            "name": "Ativo",
+            "type": "bool",
+            "nullable": false,
+            "default": 1,
+            "editable": false,
+            "required": true
+        },
+        "shelf": {
+            "name": "Prateleira",
+            "type": "int",
+            "editable": true,
+            "required": true
+        },
+        "category": {
+            "name": "Categoria",
+            "type": "object",
+            "object": "Category",
+            "follow": true,
+            "nullable": false,
+            "editable": true,
+            "required": true
+        }
+    },
+    "grid": {
+        "name": "Nome",
+        "created_at": "Criado em"
+    },
+    "roles": {
+        "free": [
+        ],
+        "normal": [
+            "index",
+            "search",
+            "view",
+            "edit",
+            "save"
+        ]
+    }
+}

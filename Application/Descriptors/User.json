@@ -1,0 +1,77 @@
+{
+    "name": "Usuário",
+    "fields": {
+        "id": {
+            "name": "Código",
+            "type": "index",
+            "editable": true
+        },
+        "name": {
+            "name": "Nome",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true,
+            "regex": "[A-Za-z ]{5,}"
+        },
+        "email": {
+            "name": "Email",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true,
+            "regex": "A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"
+        },
+        "login": {
+            "name": "Login",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "pwrd": {
+            "name": "Senha",
+            "type": "password",
+            "nullable": false,
+            "editable": false,
+            "required": true
+        },
+        "is_admin": {
+            "name": "Administrador",
+            "type": "bool",
+            "nullable": false,
+            "default": 0,
+            "editable": true,
+            "required": true
+        },
+        "status": {
+            "name": "Ativo",
+            "type": "bool",
+            "nullable": false,
+            "default": 1,
+            "editable": true,
+            "required": true
+        },
+        "user": {
+            "name": "Criado por:",
+            "type": "object",
+            "object": "User",
+            "editable": false,
+            "follow": false,
+            "required": true
+        }
+    },
+    "grid": {
+        "name": "Nome"
+    },
+    "roles": {
+        "free": [],
+        "normal": [
+            "index",
+            "search",
+            "view",
+            "edit",
+            "save"
+        ]
+    }
+}

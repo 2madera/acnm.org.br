@@ -1,0 +1,174 @@
+{
+    "name": "Pessoa",
+    "fields": {
+        "id": {
+            "name": "Código",
+            "type": "index",
+            "editable": true
+        },
+        "photo": {
+            "name": "Foto",
+            "type": "photo",
+            "editable": true,
+            "required": false,
+            "nullable": true
+        },
+        "name": {
+            "name": "Nome",
+            "type": "string",
+            "editable": true,
+            "required": true,
+            "nullable": false,
+            "regex": "[A-Za-z ]{5,}"
+        },
+        "birth": {
+            "name": "Nascimento",
+            "type": "datetime",
+            "editable": true,
+            "required": true
+        },
+        "address": {
+            "name": "Endereço",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        },
+        "phone": {
+            "name": "Telefone",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "cell": {
+            "name": "Celular",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "scholl_name": {
+            "name": "Escola onde estuda",
+            "type": "string",
+            "editable": true,
+            "required": false,
+            "regex": "[A-Za-z ]{5,}"
+        },
+        "mother_name": {
+            "name": "Nome da Mãe",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "cpf": {
+            "name": "CPF",
+            "type": "cpf",
+            "editable": true,
+            "required": true,
+            "mask": "999.999.999-99"
+        },
+        "public_school": {
+            "name": "Estudante do Ensino Público",
+            "type": "bool",
+            "editable": true,
+            "required": false
+        },
+        "graduation": {
+            "name": "Série",
+            "type": "string",
+            "editable": true,
+            "regex": "[A-Za-z ]{5,}"
+        },
+        "school_period": {
+            "name": "Período escolar",
+            "type": "choose_one",
+            "editable": true,
+            "required": false,
+            "options": {
+                "m": "Manhã",
+                "t": "Tarde",
+                "n": "Noite"
+            }
+        },
+        "brother_count": {
+            "name": "Número de irmãos",
+            "type": "int",
+            "editable": true,
+            "required": false
+        },
+        "extra_courses": {
+            "name": "Cursos extras",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "school_projects": {
+            "name": "Projetos que tenha participado na escola",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "acnm_projects": {
+            "name": "Atividades realizadas dentro da ACNM",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "how_knows": {
+            "name": "Como ficou sabendo da ACNM?",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "emergency_call": {
+            "name": "Em caso de emergência falar com",
+            "type": "string",
+            "editable": true,
+            "required": false
+        },
+        "created_at": {
+            "name": "Criado em",
+            "type": "datetime",
+            "editable": false,
+            "required": true,
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "status": {
+            "name": "Ativo",
+            "type": "bool",
+            "editable": true,
+            "required": true,
+            "default": true
+        },
+        "user": {
+            "name": "Criado por",
+            "type": "object",
+            "object": "User",
+            "follow": true,
+            "editable": true,
+            "required": true
+        }
+    },
+    "has_many": {
+        "rent": {
+            "name": "Empréstimos",
+            "object": "Rent",
+            "field": "people"
+        }
+    },
+    "grid": {
+        "name": "Nome",
+        "birth": "Nascimento",
+        "cpf": "CPF"
+    },
+    "roles": {
+        "free": [],
+        "normal": [
+            "index",
+            "search",
+            "view",
+            "edit",
+            "save",
+            "delete"
+        ]
+    }
+}

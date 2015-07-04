@@ -1,0 +1,21 @@
+div.pagination{
+    margin: 0 auto 30px;
+    width:400px;
+}
+
+div.pagination strong, div.pagination a{
+    display: inline-block;
+    padding: 10px;
+    color:#444;
+    background: #fff;
+    border:1px solid #ddd;
+}
+
+div.pagination a:hover, div.pagination a:active {
+    background: #e5e5e5;
+    text-decoration: none;
+}
+
+input.date{
+    width: 100px;
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Categoria",
+    "fields": {
+        "id": {
+            "name": "Código",
+            "type": "index",
+            "editable": true
+        },
+        "name": {
+            "name": "Nome",
+            "type": "string",
+            "nullable": false,
+            "editable": true,
+            "required": true
+        }
+    },
+    "grid": {
+        "name": "Nome"
+    },
+    "roles": {
+        "free": [],
+        "normal": [
+            "index",
+            "search",
+            "view",
+            "edit",
+            "save"
+        ]
+    }
+}
