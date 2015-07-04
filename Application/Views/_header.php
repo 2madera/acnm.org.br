@@ -7,7 +7,7 @@
     <!--Styles-->
     <link href='//fonts.googleapis.com/css?family=Muli:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo $url->make('assets/css/main.css') ?>">
-    <link rel="stylesheet" href="<?php echo $url->make('assets/css/boo.css') ?>">
+    <link rel="stylesheet" href="<?php echo $url->make('assets/css/bootstrap.css') ?>">
     <link rel="stylesheet" href="<?php echo $url->make('assets/css/bootstrap-datepicker3.min.css') ?>">
 </head>
 <body>
