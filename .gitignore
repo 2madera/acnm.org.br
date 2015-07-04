@@ -1,0 +1,4 @@
+*.clpprj
+.idea
+uploads/*
+Application/logs/*
