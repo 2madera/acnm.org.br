@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>ACNM - Associação Cultural Nino Miraldi</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <!--Styles-->
     <link href='//fonts.googleapis.com/css?family=Muli:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo $url->make('assets/css/main.css') ?>">
