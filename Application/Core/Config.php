@@ -17,7 +17,7 @@ class Config {
     public static $default_controller = "home";
     public static $default_action = "index";
     public static $htaccess_param = "p";
-    public static $log_directory = "/Users/madera/www/acnm.org.br/Application/logs";
-    public static $upload_directory = "/Users/madera/www/acnm.org.br/uploads";
+    public static $log_directory = "/var/www/html/acnm.org.br/Application/logs";
+    public static $upload_directory = "/var/www/html/acnm.org.br/uploads";
     public static $upload_max_file_size = 5 * (1024 * 1024);
 }
