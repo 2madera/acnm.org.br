@@ -1,5 +1,6 @@
 *.clpprj
 .idea
-uploads/*
-Application/logs/*
 assets/css/boo.css
+Application/logs/
+uploads/
+Application/Core/Config.php
