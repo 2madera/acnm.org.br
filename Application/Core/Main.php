@@ -14,6 +14,8 @@ class Main {
 
     function __construct() {
 
+        Config::getEnvironmentValues();
+
         $url = new Url();
 
         try {
